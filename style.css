@@ -1,0 +1,49 @@
+*{
+    font-family: calcFont;
+}
+
+#calc{
+    background-color: rgb(25, 25, 25);
+    border:0.2vw black solid;
+}
+
+button{
+    padding:30px;
+    width:7.4vw;
+}
+
+button{
+    border:0.1vw black solid;
+    color:white;
+    font-size: 1.23vw;
+    background-color: rgb(45, 45, 45);
+    transition:background-color 0.5s;
+}
+
+button:hover{
+    background-color:rgb(64, 64, 64);
+}
+
+input{
+    border:0.1vw black solid;
+    font-size: 40px;
+    padding:20px 0px;
+    margin:10px;
+}
+
+p{
+    background-color:white;
+    padding:10px 20px;
+    font-size:1.3vw;
+    border-radius: 10%;
+    color:grey;
+}
+
+.calcRow{
+    padding:0px 0px;
+}
+
+@font-face {
+    font-family: calcFont;
+    src: url('./font/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Semibold.otf');
+}
