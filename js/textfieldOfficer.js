@@ -1,5 +1,11 @@
+import {resolveVariables} from './validation.js'
+
 function formatEquation(unformattedString) {
-    return unformattedString.toLowerCase().replace("pow", "**").replace("x", "*");
+    let formattedString = resolveVariables(unformattedString);
+    return formattedString
+      .toLowerCase()
+      .replace(/pow/g, "**")
+      .replace(/x/g, "*");
 }
 
 function clearField(event) {

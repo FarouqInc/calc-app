@@ -1,6 +1,5 @@
 import { init } from "./utilities.js";
 import { createVariable,evaluateExpression,checkEvaluated } from './inputCases.js';
-const { sin, tan, cos, PI: pi ,E:e} = Math;
 
 window.onload = init();
 
@@ -14,7 +13,7 @@ function processInput(event) {
   let lastStepScreen = document.getElementById("lastStepScreen");
 
   // To reset the textfield after a result is generated.
-  checkEvaluated(textField,lastStepScreen);
+    checkEvaluated(textField,lastStepScreen);
 
   // Option 1: Create a Variable
   if (pressedButtonValue === "VAR") {
@@ -30,7 +29,11 @@ function processInput(event) {
     let textField = document.getElementById("inputScreen");
     textField.value = textField.value.slice(0, -1);
   } 
-  // Option 4: Enter a value
+  // Option 4: Clear the Screen
+  else if (pressedButtonValue === "AC") {
+    textField.value = "";
+  }
+  // Option 5: Enter a value
   else {
     let textField = document.getElementById("inputScreen");
     textField.value = textField.value + pressedButtonValue;
